@@ -262,85 +262,6 @@ To find the free variables that a closure contains:
 >
 >\>>>
 
-## Task content overview:
-    def add(*args):
-    """Adds the numbers passed as argument and returns the sum using in-built `sum`"""
-
-----------
-
-    def mul(*args):
-    """Multiplies the numbers passed as argument and returns the final value"""
-
--------------
-
-    def div(*args):
-    """Divides the numbers passed as argument and returns the final value"""
-
----------------
-
-    def check_doc_len(fn):
-    """
-    Checks if the passed function has at least 50 characters in the doc string.
-    
-    :param fn: the function to check for doc string length
-    ----------
-
-    :return: closure for `check_docstring` inner func with free variable `limit`
-    """
-
--------------
-
-    def fibonacci():
-    """
-    A function returning a `closure` func to get next valid fibonacci number.
-    As a closure is returned, different closures created for `fibonacci` will be independent and start from 0/
-    :return: a closure that returns the next valid fibonacci number
-    """
-
--------------
-
-    def count_fn_called(fn):
-    """
-    Counts and increments the number of times the passed function has been called, uses global dictionary and returns closure for called function.
-    :param fn: the function's closure to be returned after incrementing the count
-    :return: `check` closure
-    """
-
-
--------------
-
-    def check_all_fn_called(fn):
-    """
-    Prints the number of times the passed function was called using global dictionary `fn_global_dict`
-    :return: formatted string
-    """
-
-----------
-
-    def count_fn_called_with_dict(*, dict_, fn):
-    """
-    Maintains the called count for each function passed into the dictionary passed.
-    :param dict_: the dictionary to maintain the called count for `fn`
-    :param fn: the function to return with *args and **kwargs from closure
-    :return: a closure that returns the `fn` after incrementing called count by 1
-    """
-
-
----------
-
-**Important constructs/concepts used in this repo:**
-> [
-    'namespace',
-    'scope',
-    'global',
-    'local',
-    'nonlocal',
-    'closure',
-    'reduce',
-    'lambda'
-]
-
-
 **NOTE:** **List comprehensions leak the loop control variable in Python 2 but NOT in Python 3.**
 
 
@@ -474,3 +395,86 @@ print("global:", x)
 # outer: 2
 # global: 0
 ```
+
+
+
+## Task content overview:
+    def add(*args):
+    """Adds the numbers passed as argument and returns the sum using in-built `sum`"""
+
+----------
+
+    def mul(*args):
+    """Multiplies the numbers passed as argument and returns the final value"""
+
+-------------
+
+    def div(*args):
+    """Divides the numbers passed as argument and returns the final value"""
+
+---------------
+
+    def check_doc_len(fn):
+    """
+    Checks if the passed function has at least 50 characters in the doc string.
+    
+    :param fn: the function to check for doc string length
+    ----------
+
+    :return: closure for `check_docstring` inner func with free variable `limit`
+    """
+
+-------------
+
+    def fibonacci():
+    """
+    A function returning a `closure` func to get next valid fibonacci number.
+    As a closure is returned, different closures created for `fibonacci` will be independent and start from 0/
+    :return: a closure that returns the next valid fibonacci number
+    """
+
+-------------
+
+    def count_fn_called(fn):
+    """
+    Counts and increments the number of times the passed function has been called, uses global dictionary and returns closure for called function.
+    :param fn: the function's closure to be returned after incrementing the count
+    :return: `check` closure
+    """
+
+
+-------------
+
+    def check_all_fn_called(fn):
+    """
+    Prints the number of times the passed function was called using global dictionary `fn_global_dict`
+    :return: formatted string
+    """
+
+----------
+
+    def count_fn_called_with_dict(*, dict_, fn):
+    """
+    Maintains the called count for each function passed into the dictionary passed.
+    :param dict_: the dictionary to maintain the called count for `fn`
+    :param fn: the function to return with *args and **kwargs from closure
+    :return: a closure that returns the `fn` after incrementing called count by 1
+    """
+
+
+---------
+
+**Important constructs/concepts used in this repo:**
+> [
+    'namespace',
+    'scope',
+    'global',
+    'local',
+    'nonlocal',
+    'closure',
+    'reduce',
+    'lambda'
+]
+
+
+
